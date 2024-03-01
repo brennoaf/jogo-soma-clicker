@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+main{
+    margin: 5em 0 5em 0;
+    display: flex;
+    flex-direction: column;
+    width:500px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+
+}
+
+.game-content{
+    width: 300px;
+    background-color: gray;
+}
+
+.operators-var{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+
+    margin-bottom: 4em;
+    
+}.game-ent-var{
+    display: flex;
+    align-items: center;
+
+    }.operator-textbox{
+        resize: none;
+        width: 3em;
+        height: 2em;
+
+    }
+
+.sum-button-content{
+    display: flex;
+    justify-content: center;
+
+}.sum-button{
+    padding: .6em 1em .6em 1em;
+
+    border-radius: 5px;
+    border: none;
+}
+
+.result-of-all{
+    display: grid;
+    justify-content: center;
+    margin-top: 2em;
+
+}.result-textbox{
+    resize: none;
+
+}
+
+.game-menu{
+    position: fixed;
+    left: 1em;
+    top: 1em;
+
+
+}.game-shop{
+    padding: .5em .8em .5em .8em;
+    width: 50px;
+    background-color: rgba(211, 224, 30, 0.418);
+
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.shop-popup{
+    position: fixed;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    height: 100%;
+
+    z-index: 99;
+
+}.popup-background{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    
+    opacity: 70%;
+
+}.popup-content{
+    position: absolute;
+    width: 500px;
+
+    border-radius: 8px;
+    background: white;
+
+}.popup-close-button{
+    position: relative;
+    top: 1em;
+    left: 1em;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.active{
+    display: flex;
+}
+
+.shop-cont{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: 94.5%;
+
+    margin: 1em 0 1em 0;
+}
+
+.shop-page{
+    width: 400px;
+    height: 100%;
+
+    padding: 1em 0 1em 0;
+    background-color: blue;
+}
+
+.shop-item{
+    background-color: yellow;
+    padding: .8em 0 .8em 0;
+    margin-bottom: 1em;
+    width: 100%;
+
+}.shop-item-info{
+    display: flex;
+    flex-direction: row;
+    margin-top: -.8em;
+    width: 100%;
+
+}.shop-item-icon{
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+
+}.shop-item-texts{
+    width: 300px;
+    }.item-title{
+        font-size: 20px;
+        margin-bottom: .2em;
+
+    }
+
+
+.buy-content{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+
+    margin-top: 1em;
+}.buy-information{
+    width: 150px;
+
+}.buy-button{
+    width: 100px;
+    height: 40px;
+
+    border: none;
+    border-radius: 8px;
+    
+    cursor: pointer;
+
+    }.buy-button:disabled{
+        cursor:not-allowed;
+    }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="shop-popup" id="popup-shop">
+        <div class="popup-background"></div>
+        <div class="popup-content">
+            <button class="popup-close-button" id="btn-close-shop">❌</button>
+            <div class="shop-cont">
+                <div class="shop-page">
+                    <div class="item-buynumber shop-item">
+                        <div class="info-buynumber shop-item-info">
+                            <div class="icon-buynumber shop-item-icon"></div>
+                            <div class="shop-item-texts">
+                                <section class="item-title"><strong>Comprar números</strong></section>
+                                <section class="item-desc">Compre números para serem utilizados em suas operações!</section>
+                            </div>
+                        </div>
+                        <div class="buy-buynumber buy-content">
+                            <section class="buy-information">Comprar por <strong id="buy-number-price">100</strong> de total</section>
+                            <button class="buy-button" id="buy-button-numbers" name="100" disabled="true">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="item-buyvar shop-item">
+                        <div class="info-buyvar shop-item-info">
+                            <div class="icon-buyvar shop-item-icon"></div>
+                            <div class="shop-item-texts">
+                                <section class="item-title"><strong>Comprar variáveis</strong></section>
+                                <section class="item-desc"> Compre entidades para serem utilizadas em suas operações!</section>
+                            </div>
+                        </div>
+                        <div class="buy-buynvar buy-content">
+                            <section class="buy-information">Comprar por <strong id="buy-var-price">100</strong> de total</section>
+                            <button class="buy-button" id='buy-button-vars' name="100" disabled="true">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="item-buyauto shop-item">
+                        <div class="info-buyauto shop-item-info">
+                            <div class="icon-buyauto shop-item-icon"></div>
+                            <div class="shop-item-texts">
+                                <section class="item-title"><strong>Comprar clique automático</strong></section>
+                                <section class="item-desc"> Compre cliques automáticos! <p>(0.1x mais rápido)</p></section>
+                            </div>
+                        </div>
+                        <div class="buy-buynauto buy-content">
+                            <section class="buy-information">Comprar por <strong id="buy-auto-price">100</strong> de total</section>
+                            <button class="buy-button" id='buy-button-auto' name="100" disabled="true">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-menu">
+        <div class="atual-money"></div>
+        <div class="game-shop" id="btn-open-shop"><p style="font-size: 20px">💲</p></div>
+        <div class="show-money-content">
+            <section class="money-quantity-content"><p>Total: R$</p><strong id="money-quantity">0</strong></section>
+        </div>
+    </div>
+    <main>
+        <div class="game-content">
+            <div class="operators-var" id="operators-content">
+                <section class="game-ent-var separator" id="var1"><p>x=</p> <textarea readonly class="operator-textbox" id="var1-text"></textarea></section>
+                <section class="game-ent-var" id="var2"><p>y=</p> <textarea readonly class="operator-textbox" id="var2-text"></textarea></section>
+
+            </div>
+            <div class="sum-button-content">
+                <button class="sum-button" id="button-sum">somar!</button>
+            </div>
+            <div class="result-of-all">
+                <section><p>Resultado da soma</p></section>
+                <textarea readonly class="result-textbox" id="textbox-result"></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
