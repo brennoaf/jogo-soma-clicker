@@ -18,12 +18,12 @@
                         <div class="info-buynumber shop-item-info">
                             <div class="icon-buynumber shop-item-icon"></div>
                             <div class="shop-item-texts">
-                                <section class="item-title"><strong>Comprar números</strong></section>
-                                <section class="item-desc">Compre números para serem utilizados em suas operações!</section>
+                                <span class="item-title"><strong>Comprar números</strong></span>
+                                <span class="item-desc">Compre números para serem utilizados em suas operações!</span>
                             </div>
                         </div>
                         <div class="buy-buynumber buy-content">
-                            <section class="buy-information">Comprar por <strong id="buy-number-price">100</strong> de total</section>
+                            <span class="buy-information">Comprar por <strong id="buy-number-price">100</strong> de total</span>
                             <button class="buy-button" id="buy-button-numbers" name="100" disabled="true">Comprar</button>
                         </div>
                     </div>
@@ -31,12 +31,12 @@
                         <div class="info-buyvar shop-item-info">
                             <div class="icon-buyvar shop-item-icon"></div>
                             <div class="shop-item-texts">
-                                <section class="item-title"><strong>Comprar variáveis</strong></section>
-                                <section class="item-desc"> Compre entidades para serem utilizadas em suas operações!</section>
+                                <span class="item-title"><strong>Comprar variáveis</strong></span>
+                                <span class="item-desc"> Compre entidades para serem utilizadas em suas operações!</span>
                             </div>
                         </div>
                         <div class="buy-buynvar buy-content">
-                            <section class="buy-information">Comprar por <strong id="buy-var-price">100</strong> de total</section>
+                            <span class="buy-information">Comprar por <strong id="buy-var-price">100</strong> de total</span>
                             <button class="buy-button" id='buy-button-vars' name="100" disabled="true">Comprar</button>
                         </div>
                     </div>
@@ -44,12 +44,12 @@
                         <div class="info-buyauto shop-item-info">
                             <div class="icon-buyauto shop-item-icon"></div>
                             <div class="shop-item-texts">
-                                <section class="item-title"><strong>Comprar clique automático</strong></section>
-                                <section class="item-desc"> Compre cliques automáticos! <p>(0.1x mais rápido)</p></section>
+                                <span class="item-title"><strong>Comprar clique automático</strong></span>
+                                <span class="item-desc"> Compre cliques automáticos! <p>(0.1x mais rápido)</p></span>
                             </div>
                         </div>
                         <div class="buy-buynauto buy-content">
-                            <section class="buy-information">Comprar por <strong id="buy-auto-price">100</strong> de total</section>
+                            <span class="buy-information">Comprar por <strong id="buy-auto-price">100</strong> de total</span>
                             <button class="buy-button" id='buy-button-auto' name="100" disabled="true">Comprar</button>
                         </div>
                     </div>
@@ -61,22 +61,30 @@
         <div class="atual-money"></div>
         <div class="game-shop" id="btn-open-shop"><p style="font-size: 20px">💲</p></div>
         <div class="show-money-content">
-            <section class="money-quantity-content"><p>Total: R$</p><strong id="money-quantity">0</strong></section>
+            <span class="money-quantity-content"><p>Total: R$</p><strong id="money-quantity">0</strong></span>
         </div>
     </div>
+
     <main>
         <div class="game-content">
             <div class="operators-var" id="operators-content">
-                <section class="game-ent-var separator" id="var1"><p>x=</p> <textarea readonly class="operator-textbox" id="var1-text"></textarea></section>
-                <section class="game-ent-var" id="var2"><p>y=</p> <textarea readonly class="operator-textbox" id="var2-text"></textarea></section>
-
+                <span class="game-ent-var separator" id="var1"><p>x=</p> <textarea readonly class="operator-textbox" id="var1-text"></textarea></span>
+                <span class="game-ent-var" id="var2"><p>y=</p> <textarea readonly class="operator-textbox" id="var2-text"></textarea></span>
             </div>
-            <div class="sum-button-content">
-                <button class="sum-button" id="button-sum">somar!</button>
-            </div>
-            <div class="result-of-all">
-                <section><p>Resultado da soma</p></section>
-                <textarea readonly class="result-textbox" id="textbox-result"></textarea>
+            
+            <div class="result-content">
+                <div class="sum-button-content">
+                    <button class="sum-button" id="button-sum">somar!</button>
+                </div>
+                <span style="display:flex; flex-direction: row; align-items: center; justify-content: center;">
+                    <div class="result-of-all">
+                        <span><p>Resultado da soma</p></span>
+                        <textarea readonly class="result-textbox" id="textbox-result"></textarea>
+                    </div>
+                    <div class="multiplier-button-content">
+                        <button class="multiply-button" id="button-multiply">x0.5</button>
+                    </div>
+                </span>
             </div>
         </div>
     </main>

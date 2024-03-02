@@ -62,20 +62,20 @@ export function buyVars(userMoney, buyButtons, moneyQuantity, priceDisplay, oper
         ///////////////////////////////////////////////////////////////////////
         //Basicamente o que acontece ao comprar
 
-        const newVar = document.createElement('section');
+        const newVar = document.createElement('span');
         newVar.className = 'game-ent-var'
         newVar.id = `var${disponibleVars.length + 1}`
 
         //verificar posicao dentro da grid
-        if((disponibleVars.length + 1) % 3 == 0){
-            newVar.textContent = 'z='
+        if((disponibleVars.length - 1) % 3 == 0){
+            newVar.textContent = 'y='
 
         }else
-        if((disponibleVars.length + 1) % 2 == 0){
+        if(disponibleVars.length % 3 == 0){
             newVar.textContent = 'x='
 
         }else{
-            newVar.textContent = 'y='
+            newVar.textContent = 'z='
         }
 
         const newVarTextArea = document.createElement('textarea')
@@ -87,11 +87,11 @@ export function buyVars(userMoney, buyButtons, moneyQuantity, priceDisplay, oper
             //de variaveis disponíveis
         disponibleVars.push(newVar.id)
 
-        //adicionando text area à section criada, que seria a
+        //adicionando text area à span criada, que seria a
             //nova variavel trabalhadora
         newVar.appendChild(newVarTextArea);
 
-        //adicionando section criada ao pai
+        //adicionando span criada ao pai
         operatorVars.appendChild(newVar);
         
         //fim do acontecimento

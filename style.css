@@ -36,6 +36,7 @@ main{
 .operators-var{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 1em;
     justify-content: center;
 
     margin-bottom: 4em;
@@ -60,17 +61,27 @@ main{
 
     border-radius: 5px;
     border: none;
+
+    cursor: pointer;
 }
 
 .result-of-all{
     display: grid;
     justify-content: center;
-    margin-top: 2em;
 
 }.result-textbox{
     resize: none;
 
 }
+
+.multiply-button-content{
+
+    }.multiply-button{
+        padding: 1em;
+
+        border: none;
+        border-radius: 5px;
+    }
 
 .game-menu{
     position: fixed;
@@ -187,6 +198,7 @@ main{
 }.buy-button{
     width: 100px;
     height: 40px;
+    margin-left: 1em;
 
     border: none;
     border-radius: 8px;

@@ -18,7 +18,7 @@ const gameEngine = {
         registTempValues: [],
         autoClickDelay : { ms : 3000, disabled: true},
 
-        userMoney: { value: 99999 }
+        userMoney: { value: 999999 }
     }
 }
 
@@ -123,6 +123,11 @@ shop.buy.autoclick.buyButton.addEventListener('click', () => {
                 gameEngine.config.userMoney, 
                 gameEngine.assets.moneyQuantityDisplay
             )
+            
+            shopServices.switchButtons(
+                gameEngine.config.userMoney, 
+                shop.buy.buttons
+            );
             
         }, gameEngine.config.autoClickDelay.ms)
 
