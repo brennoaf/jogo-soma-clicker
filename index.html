@@ -67,16 +67,18 @@
 
     <main>
         <div class="game-content">
-            <div class="operators-var" id="operators-content">
-                <span class="game-ent-var separator" id="var1"><p>x=</p> <textarea readonly class="operator-textbox" id="var1-text"></textarea></span>
-                <span class="game-ent-var" id="var2"><p>y=</p> <textarea readonly class="operator-textbox" id="var2-text"></textarea></span>
+            <div class="radius-controller" id="radius-controller">
+                <div class="operators-var" id="operators-content">
+                    <span class="game-ent-var separator" id="var1"><p>x=</p> <textarea readonly class="operator-textbox" id="var1-text"></textarea></span>
+                    <span class="game-ent-var" id="var2"><p>y=</p> <textarea readonly class="operator-textbox" id="var2-text"></textarea></span>
+                </div>
             </div>
             
-            <div class="result-content">
+            <div class="result-content" id="result-circle">
                 <div class="sum-button-content">
                     <button class="sum-button" id="button-sum">somar!</button>
                 </div>
-                <span style="display:flex; flex-direction: row; align-items: center; justify-content: center;">
+                <span style="display:flex; flex-direction: row; align-items:end; justify-content: center;">
                     <div class="result-of-all">
                         <span><p>Resultado da soma</p></span>
                         <textarea readonly class="result-textbox" id="textbox-result"></textarea>
@@ -90,5 +92,8 @@
     </main>
 
     <script src="./index.js" type="module"></script>
+    <script>
+        
+    </script>
 </body>
 </html>

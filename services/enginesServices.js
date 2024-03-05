@@ -25,6 +25,14 @@ class NumberLogic{
         return userMoney.value;
     }
 
+
+    multiplayResult(userMoney, sumResult, multiplyValue){
+        sumResult = sumResult * multiplyValue;
+        userMoney += sumResult;
+
+        sumResult = null
+        return userMoney;
+    }
 }
 
 class PageManipulation{
@@ -36,6 +44,45 @@ class PageManipulation{
         shopPopup.classList.add('active')
     }
     
+
+    operatorsRepos(circulo){
+        const items = document.querySelectorAll('.game-ent-var');
+
+        const radius = circulo.offsetWidth / 2; // Raio da div circular (ajuste conforme necessário)
+
+        items.forEach((item, index) => {
+        const angle = (360 / items.length) * index;
+        const x = radius * Math.cos((angle * Math.PI) / 180);
+        const y = radius * Math.sin((angle * Math.PI) / 180);
+        item.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    }
+
+    reposRadiusController(circulo, isDragging, initialX, initialY){
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            this.operatorsRepos(circulo);
+            const deltaX = e.clientX - initialX;
+            const deltaY = e.clientY - initialY;
+
+            console.log(deltaX)
+            const newRadius = Math.max(400, circulo.clientWidth + deltaX);
+            
+            if(newRadius < 800){
+                circulo.style.width = `${newRadius}px`;
+                circulo.style.height = `${newRadius}px`;
+
+                initialX = e.clientX;
+                initialY = e.clientY;
+        }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+    }
 }
 
 export { NumberLogic, PageManipulation }

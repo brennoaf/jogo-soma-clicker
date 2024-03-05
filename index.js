@@ -9,7 +9,8 @@ const gameEngine = {
         sumButton: document.getElementById('button-sum'),
         sumResult: document.getElementById('textbox-result'),
         moneyQuantityDisplay: document.getElementById('money-quantity'),
-        operatorVars: document.getElementById('operators-content')
+        operatorVars: document.getElementById('operators-content'),
+        circulo: document.getElementById('radius-controller')
     },
 
     config: {
@@ -17,6 +18,7 @@ const gameEngine = {
         disponibleVars: [vars[0].id, vars[1].id],
         registTempValues: [],
         autoClickDelay : { ms : 3000, disabled: true},
+        toMultiplyValue: 1.5,
 
         userMoney: { value: 999999 }
     }
@@ -50,6 +52,13 @@ const shop = {
         }
     }
 }
+
+
+window.onload = function() {
+    pageManipulation.operatorsRepos(
+        gameEngine.assets.circulo
+    )
+  };
 
 
 
@@ -99,6 +108,9 @@ shop.buy.vars.buyButton.addEventListener('click', () => {
         vars
     );
 
+    pageManipulation.operatorsRepos(
+        gameEngine.assets.circulo
+    )
 })
 
 let interval;
@@ -134,4 +146,21 @@ shop.buy.autoclick.buyButton.addEventListener('click', () => {
     }
 
     })
+
+
+let isDragging = false;
+let initialX, initialY;
+gameEngine.assets.circulo.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    initialX = e.clientX;
+    initialY = e.clientY;
+
+    console.log('oi')
+    pageManipulation.reposRadiusController(
+        gameEngine.assets.circulo,
+        isDragging,
+        initialX,
+        initialY
+    )
+});
 
